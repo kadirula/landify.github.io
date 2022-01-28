@@ -20,6 +20,7 @@ body {
 }
 .container {
     margin: 0 112px;
+    
 }
 @media screen and (max-width:767px) {
     .container {
@@ -28,7 +29,13 @@ body {
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
     .container {
-        margin: 0 40px;
+        margin: 0 40px;        
+    }
+}
+@media screen and (min-width:1441px) {
+    .container{
+        max-width: 1440px;
+        margin: 0 auto;
     }
 }
 /**************************** HEADER ***************************************************/
@@ -215,7 +222,10 @@ body {
     padding: 40px 0;
 }
 .brand__item {
-    margin: 0px 64px;
+    margin-right: 64px;
+}
+.brand__item:last-child{
+    margin-right: 0;
 }
 @media screen and (max-width:767px) {
     .brand__item {
@@ -328,12 +338,14 @@ body {
 
 /************************ TESTIMONIAL*******************************************************/
 .testimonial {
-    background-color: #D5FAFC;
+    background-color: #D5FAFC;    
+}
+.testimonial > .container{
     position: relative;
 }
 .testimonial__icon {
     position: absolute;
-    left: 112px;
+    left: 0px;
     top: 64px;
     z-index: 1;
     opacity: .4;
@@ -345,15 +357,15 @@ body {
     max-width: 488px;
     margin-left: 104px;
 }
-.testimonial__title {
+.testimonial__head-title {
     font-weight: bold;
     font-size: 48px;
     line-height: 60px;
     letter-spacing: -0.025em;
     color: var(--dark);
-    margin: 8px 0;
+    margin-bottom: 8px;
 }
-.testimonial__desc {
+.testimonial__head-desc {
     font-weight: normal;
     font-size: 18px;
     line-height: 28px;
@@ -470,7 +482,12 @@ body {
         line-height: 45px;
     }
 }
-
+@media screen and (min-width:1441px){
+    .testimonial__wrap{
+        margin-left: 0;
+        justify-content: center;
+    }
+}
 /************************** FOOTER *****************************************************/
 .footer {
     background: #000000;
